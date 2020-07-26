@@ -37,21 +37,6 @@ Second, I create a T-shape polygon. By the Procrustes Transformation method, the
 <p><b>Video Presentation</b>: <a href="https://www.youtube.com/watch?v=hrrRtRQCkJE">(YouTube)</a> <br /><br /></p>
 </td></tr></table>
 
-<h2>Physics-Inspired Reconstruction Algorithm</h2>
-<table class="imgtable"><tr><td>
-<img src="./pix/turb_method.png" alt="turb_method" width="300px" />&nbsp;</td>
-<td align="left"><p>Our goal of the research is to find the motion trails of the elegans.
-However in the videos, the elegans creep in a Trapezoidal maze (T-maze Fig.A) and due to the camera refocusing and unpredictable  noise, only using frame difference method cannot find stable and correct motion trails. To solve this problem, first, the Chan-Vecse active contour method  and SVD are used to extract contours of T-maze (Fig.B red line).
-Second, I create a T-shape polygon. By the Procrustes Transformation method, the polygon is rotated and shifted to have maximal overlap with the extracted contour(Fig.C). Third, I only focus the pixels inside the T-shape polygon and apply the Frame Difference method to find motion trails of the elegans. Finally, I use the the K-Nearest Neighbor (KNN) algorithm to smooth the motion trails(Fig.D, red line: the final trail, green line: trails using the Frame Difference method directly).
- </p>
-<p>Publication:<br /></p>
-<ul>
-<li><p>Zhiyuan Mao, Nicholas Chimitt, and Stanley H. Chan, &lsquo;&lsquo;Image Reconstruction of Static and Dynamic Scenes through Anisoplanatic Turbulence&rsquo;&rsquo;, under review,
-2020.<br /></p>
-</li>
-</ul>
-<p><b>MATLAB Implementation</b>: (Coming Soon) <br /><br /></p>
-</td></tr></table>
 
 <!--This is the footer-->
 <div id="footer">
