@@ -21,21 +21,9 @@
 <h2>Image Processing to decipher C. elegans locomotion in mazes </h2>
 <table class="imgtable"><tr><td>
 <img src="./Image/elegans.png" alt="elegans" width="300px" />&nbsp;</td>
-<td align="left"><p>Simulating atmospheric turbulence is an essential task for evaluating
-turbulence mitigation algorithms and training learning-based methods.
-Advanced numerical simulators for atmospheric turbulence are available, but
-they require evaluating wave propagation which is computationally expensive.
-In this paper, we present a propagation-free method for simulating imaging
-through turbulence. The key idea behind our work is a new method to draw
-inter-modal and spatially correlated Zernike coefficients. By establishing
-the equivalence between the angle-of-arrival correlation by Basu, McCrae and
-Fiorino (2015) and the multi-aperture correlation by Chanan (1992), we show
-that the Zernike coefficients can be drawn according to a covariance matrix
-defining the correlations. We propose fast and scalable sampling strategies
-to draw these samples. The new method allows us to compress the wave
-propagation problem into a sampling problem, hence making the new simulator
-significantly faster than existing ones. Experimental results show that the
-simulator has an excellent match with the theory and real turbulence data. </p>
+<td align="left"><p>Our goal of the research is to find the motion trails of the elegans. However in the videos, the elegans creep in a Trapezoidal maze (T-maze Fig.A) and due to the camera refocusing and unpredictable  noise, only using frame difference method cannot find stable and correct motion trails. To solve this problem, first, the Chan-Vecse active contour method  and SVD are used to extract contours of T-maze (Fig.B red line).
+Second, I create a T-shape polygon. By the Procrustes Transformation method, the polygon is rotated and shifted to have maximal overlap with the extracted contour(Fig.C). Third, I only focus the pixels inside the T-shape polygon and apply the Frame Difference method to find motion trails of the elegans. Finally, I use the the K-Nearest Neighbor (KNN) algorithm to smooth the motion trails(Fig.D, red line: the final trail, green line: trails using the Frame Difference method directly).
+ </p>
 <p>Publication:<br /></p>
 <ul>
 <li><p>Nicholas Chimitt, Stanley H. Chan, &lsquo;&lsquo;<a href="https://arxiv.org/abs/2004.11210">Simulating Anisoplanatic Turbulence by Sampling Inter-modal and Spatially
@@ -56,7 +44,8 @@ IEEE International Conference on Computational Photography (ICCP) 2020. <br /> <
 <h2>Physics-Inspired Reconstruction Algorithm</h2>
 <table class="imgtable"><tr><td>
 <img src="./pix/turb_method.png" alt="turb_method" width="300px" />&nbsp;</td>
-<td align="left"><p>Our goal of the research is to find the motion trails of the elegans. However in the videos, the elegans creep in a Trapezoidal maze (T-maze Fig.A) and due to the camera refocusing and unpredictable  noise, only using frame difference method cannot find stable and correct motion trails. To solve this problem, first, the Chan-Vecse active contour method  and SVD are used to extract contours of T-maze (Fig.B red line).
+<td align="left"><p>Our goal of the research is to find the motion trails of the elegans.
+However in the videos, the elegans creep in a Trapezoidal maze (T-maze Fig.A) and due to the camera refocusing and unpredictable  noise, only using frame difference method cannot find stable and correct motion trails. To solve this problem, first, the Chan-Vecse active contour method  and SVD are used to extract contours of T-maze (Fig.B red line).
 Second, I create a T-shape polygon. By the Procrustes Transformation method, the polygon is rotated and shifted to have maximal overlap with the extracted contour(Fig.C). Third, I only focus the pixels inside the T-shape polygon and apply the Frame Difference method to find motion trails of the elegans. Finally, I use the the K-Nearest Neighbor (KNN) algorithm to smooth the motion trails(Fig.D, red line: the final trail, green line: trails using the Frame Difference method directly).
  </p>
 <p>Publication:<br /></p>
