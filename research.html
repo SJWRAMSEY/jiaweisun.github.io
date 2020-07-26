@@ -18,7 +18,6 @@
 
 </td>
 <td id="layout-content">
-<!-- <h1>Imaging through Atmospheric Turbulence</h1> -->
 <h2>Image Processing to decipher C. elegans locomotion in mazes </h2>
 <table class="imgtable"><tr><td>
 <img src="./Image/elegans.png" alt="elegans" width="300px" />&nbsp;</td>
@@ -57,19 +56,9 @@ IEEE International Conference on Computational Photography (ICCP) 2020. <br /> <
 <h2>Physics-Inspired Reconstruction Algorithm</h2>
 <table class="imgtable"><tr><td>
 <img src="./pix/turb_method.png" alt="turb_method" width="300px" />&nbsp;</td>
-<td align="left"><p>Ground based long-range passive imaging systems often suffer from degraded
-image quality due to a turbulent atmosphere. While methods exist for removing
-such turbulent distortions, many are limited to static sequences which cannot
-be extended to dynamic scenes. In addition, the physics of the turbulence is
-often not integrated into the image reconstruction algorithm. In this paper,
-we present a unified method for atmospheric turbulence mitigation in both
-static and dynamic sequences. We are able to achieve better results compared
-to existing methods by utilizing (i) a novel space-time non-local averaging
-method to construct a reliable reference frame, (ii) a geometric consistency
-and a sharpness metric to generate the lucky frame, (iii) a
-physics-constrained prior model of the point spread function for blind
-deconvolution. Experimental results based on synthetic and real long-range
-turbulence sequences validate the performance of the proposed method. </p>
+<td align="left"><p>Our goal of the research is to find the motion trails of the elegans. However in the videos, the elegans creep in a Trapezoidal maze (T-maze Fig.A) and due to the camera refocusing and unpredictable  noise, only using frame difference method cannot find stable and correct motion trails. To solve this problem, first, the Chan-Vecse active contour method  and SVD are used to extract contours of T-maze (Fig.B red line).
+Second, I create a T-shape polygon. By the Procrustes Transformation method, the polygon is rotated and shifted to have maximal overlap with the extracted contour(Fig.C). Third, I only focus the pixels inside the T-shape polygon and apply the Frame Difference method to find motion trails of the elegans. Finally, I use the the K-Nearest Neighbor (KNN) algorithm to smooth the motion trails(Fig.D, red line: the final trail, green line: trails using the Frame Difference method directly).
+ </p>
 <p>Publication:<br /></p>
 <ul>
 <li><p>Zhiyuan Mao, Nicholas Chimitt, and Stanley H. Chan, &lsquo;&lsquo;Image Reconstruction of Static and Dynamic Scenes through Anisoplanatic Turbulence&rsquo;&rsquo;, under review,
