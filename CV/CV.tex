@@ -1,0 +1,125 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+% moderncv themes
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{verbatim}
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+% For comments and modification
+\usepackage{soul}
+% adjust the page margins
+\usepackage[scale=0.82]{geometry}
+% \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+
+% personal data
+\firstname{Jiawei}
+\familyname{Sun}
+%\mobile{+86 187-5076-3198}                    % optional, remove the line if not wanted
+\email{sunmessi@gmail.com}                      % optional, remove the line if not wanted
+\homepage{sjwramsey.github.io/jiaweisun.github.io/}                % optional, remove the line if not wanted
+%\social[github]{Trinkle23897}
+
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Education}
+\cventry{\footnotesize August 2015 \\ -- July 2019}{\href{https://www.nwpu.edu.cn/}{Northwestern Polytechnical University}}{}{Xi'an, China}{}{B.Eng. in Information Engineering{}}
+\cvline{}{\textbf{GPA:} 89/100, \textbf{Rank:} 1/50 }
+%\cvline{}{\textbf{Course Highlights:} Fundamentals of Computer Graphics ($A^+$), Database Special Topic Training ($A^+$), Data Structures ($A$), Artificial Neural Networks ($A$), Foundation of Object-Oriented Programming ($A$)}
+
+\cventry{\footnotesize August 2019 \\ -- April 2021}{\href{https://www.nwpu.edu.cn/}{University of Michigan}}{}{Ann Arbor, MI}{}{M.Eng.(Expected) in Electrical and Computer Engineering{}}
+\cvline{}{\textbf{GPA:} 4.0/4.0}
+
+
+\section{Publications and/or Manuscripts}
+
+\cvline{\footnotesize April 2020}{\textbf{\href{https://sjwramsey.github.io/jiaweisun.github.io/research.html}{Modelling learning in C. elegans chemosensory and locomotive circuitry for T-maze navigation}}}
+\cvline{}{
+{Sakelaris B.}, 
+\href{sjwramsey.github.io/jiaweisun.github.io/}{\textbf{Sun J.*}}, 
+{Li Z.*}, Banerjee S., Booth V. and \href{https://elenigourgou.engin.umich.edu/}{Gourgou E.}
+ {\scriptsize *co-second author}}
+
+
+
+\section{Research Experiences}
+
+\cventry{\footnotesize Sep 2019\\ -- Present}{\href{https://sjwramsey.github.io/jiaweisun.github.io/research.html}{Image Processing to decipher C. elegans locomotion in mazes}}{}{\newline Advisor: Research Scientist \href{https://elenigourgou.engin.umich.edu/}{\color{blue} Eleni Gourgou}}{}{Working on finding the motion trails of the elegans
+\begin{itemize}
+\item Use the chan-vese active contour method and SVD to extract contours of the maze 
+\item By \href{https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem}{the Procrustes Transformation method}, a T-shape polygon is rotated and shifted to have maximal overlap with the extracted contour
+\item Apply the Frame Difference method to find motion trails of the elegans
+\item Use the the K-Nearest Neighbor (KNN) algorithm to smooth the motion trails
+\end{itemize}
+ }
+
+\cventry{\footnotesize Jan 2020\\ -- Present}{\href{https://sjwramsey.github.io/jiaweisun.github.io/research.html}{Deep Neural Network for Spectrum Unfolding}}{}{\newline Advisor: Professor 
+\href{https://hero.engin.umich.edu/}{\color{blue} Alfred Hero
+% \& \href{http://www.suhangss.me/}{\color{blue} Hang Su}
+}}{}{Working on Recurrent Neural Network (RNN) algorithm% based on VizDoom platform. 
+\begin{itemize}
+\item Propose the RNN architecture that mimics project gradient descent method from optimization theory
+\item Complete the Recurrent Neural Network code by Pytorch
+\end{itemize}
+}
+
+\cventry{\footnotesize March 2018 \\-- June 2018}{\href{https://sjwramsey.github.io/jiaweisun.github.io/research.html}{Differential Microphones Arrays based on Differential Equation}}{}{\newline Advisor: Professor \href{http://www.jie-chen.com/}{\color{blue} Jie Chen} and Professor {\color{blue} Lijun Zhang}}{}{Worked on Differential Microphones Arrays based on Differential Equation
+\begin{itemize}
+\item Proved that the polynomial of sinusoidal function is the solution of a differential equation and the differential equation corresponding to LDMA and CDMA are same
+\end{itemize}
+%\small \href{https://www.sensetime.com/en/}{\color{blue} Sensetime Inc.} is a leading unicorn start-up in China, with emphasis on machine learning and computer vision.
+}
+
+\cventry{\footnotesize May 2017 -- October 2017}{\href{https://sjwramsey.github.io/jiaweisun.github.io/research.html}{Distributed PCA by the Primal-Dual Method of Multipliers (PDMM)}}{}{\newline Advisor: Professor \href{http://www.jie-chen.com/}{\color{blue} Jie Chen}}{}{Worked on  Distributed Optimization Algorithm
+\begin{itemize}
+\item Distributed PCA method can be obtained by simply approximating the global correlation matrix viathe Average Consensus Algorithm subroutine, so matrices are divided in columns
+\item Eigenvalue decomposition of the correlation matrix and reduced its dimension to p-dim by PDMM algorithm
+\item Programmed in Matlab to accomplish Distributed PCA
+\end{itemize}
+}
+
+\section{Selected Awards and Honors}
+\cventry{\footnotesize November 2018}{Honorable Mention of the International Mathematical Contest in Modeling}{}{}{}{}
+
+\cventry{\footnotesize November 2017}{First Prize Scholarship}{}{\hfill Northwestern Polytechnical University}{}{Top 15\% in 200 students}
+
+\cventry{\footnotesize November 2016}{National Scholarship}{}{\hfill Northwestern Polytechnical University}{}{0.2\% national wide)}
+
+
+\section{Selected Course Projects}
+
+\cventry{\footnotesize March 2018}{Development of Microphone Orientation System}{}{}{}{Achieved communication between two computers. Achieved source coding by ASIC code and adopted 2FSK modulation based on MATLAB.}
+
+% \cventry{\footnotesize January 2019}{MIPS32 CPU}{}{\hfill Computer Organization}{}{Designed and implemented a complete CPU that supports the 32-bit MIPS instruction set with TLB module, precise exception handling, and VGA extension. $\bigstar$ 53 on \href{https://github.com/Trinkle23897/mips32-cpu}{\color{blue} GitHub} by 10/22/2019}
+
+\cventry{\footnotesize January 2018}{Communication System Design}{}{}{}{Accomplished acoustic localization by Conventional Beamforming method and Direction of Arrival (DOA) location method}
+
+
+\section{Skills}
+\cvline{}{\textbf{Programming Languages:} \small Matlab, Julia, Python, Bash, HTML, Latex, Pytorch}
+%\cvline{}{\textbf{Amateur Hobbies:} \small Photography}
+
+\end{document}
